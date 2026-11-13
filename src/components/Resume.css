@@ -1,0 +1,278 @@
+/* ==========================================================================
+   Resume Section Styling - Corporate Navy & White Theme
+   Responsive PDF Viewer
+   ========================================================================== */
+
+.resume-controls-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Download Feedback Banner */
+.resume-toast-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 720px;
+  margin: -12px auto 28px;
+  padding: 12px 20px;
+  background-color: var(--navy-subtle);
+  border: 1px solid var(--navy-border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--navy-mid);
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.resume-toast-banner .toast-icon {
+  flex-shrink: 0;
+  color: var(--navy-accent);
+}
+
+.resume-toast-banner .toast-link {
+  color: var(--navy-accent);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   RESUME PDF VIEWER CARD
+   ========================================================================== */
+
+.resume-pdf-card {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.resume-pdf-card:hover {
+  border-color: var(--navy-border-subtle);
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.12);
+}
+
+/* Top Toolbar */
+.resume-pdf-toolbar {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pdf-toolbar-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-file-icon {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.pdf-title-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-filename {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy-primary);
+  line-height: 1.2;
+}
+
+.pdf-filesize {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pdf-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pdf-verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tag-check {
+  color: #10b981;
+}
+
+.toolbar-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  border: 1px solid var(--border-medium);
+  color: var(--navy-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.toolbar-action-btn:hover {
+  background-color: var(--navy-subtle);
+  border-color: var(--navy-mid);
+  color: var(--navy-mid);
+}
+
+/* ==========================================================================
+   RESPONSIVE EMBED CONTAINER
+   ========================================================================== */
+
+.resume-embed-container {
+  width: 100%;
+  background-color: #525659;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.resume-pdf-embed {
+  width: 100%;
+  height: 960px;
+  border: none;
+  display: block;
+  background-color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .resume-pdf-embed {
+    height: 780px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-pdf-embed {
+    height: 620px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-pdf-embed {
+    height: 520px;
+  }
+}
+
+.pdf-no-support-msg {
+  padding: 30px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.pdf-no-support-msg a {
+  color: #93c5fd;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Bottom Helper Bar */
+.resume-pdf-footer {
+  padding: 12px 20px;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.footer-notice-text code {
+  color: var(--navy-mid);
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.footer-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--navy-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-link-btn:hover {
+  color: var(--navy-mid);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   PDF ERROR STATE
+   ========================================================================== */
+
+.resume-pdf-error {
+  padding: 48px 24px;
+  text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.resume-pdf-error .error-icon {
+  color: #dc2626;
+}
+
+.resume-pdf-error .error-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy-primary);
+}
+
+.resume-pdf-error .error-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.resume-pdf-error .error-actions {
+  margin-top: 8px;
+}

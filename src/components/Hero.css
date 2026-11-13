@@ -1,0 +1,499 @@
+/* Hero Section Styling - Corporate Navy & White */
+.hero-section {
+  padding-top: calc(var(--navbar-height) + 40px);
+  padding-bottom: 72px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(30, 58, 138, 0.05) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Badges Row */
+.hero-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: var(--status-available-bg);
+  border: 1px solid var(--status-available-border);
+  border-radius: var(--radius-full);
+}
+
+.status-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-available);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.status-text {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #065f46;
+  letter-spacing: 0.02em;
+}
+
+.hero-sih-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #92400e;
+  letter-spacing: 0.02em;
+}
+
+.sih-icon {
+  color: #d97706;
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  line-height: 1.12;
+  margin-bottom: 12px;
+  letter-spacing: -0.035em;
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.35rem;
+  }
+}
+
+.navy-accent-text {
+  color: var(--navy-mid);
+}
+
+.hero-role {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  .hero-role {
+    font-size: 1.15rem;
+  }
+}
+
+.hero-bio {
+  font-size: 1.075rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+/* Connected Profiles Social Row */
+.hero-social-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.social-row-label {
+  font-size: 0.85rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #ffffff;
+  color: var(--navy-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.hero-social-btn:hover {
+  background-color: var(--navy-subtle);
+  border-color: var(--navy-mid);
+  color: var(--navy-mid);
+  transform: translateY(-1px);
+}
+
+.hero-social-btn.is-placeholder {
+  background-color: var(--bg-secondary);
+  color: var(--text-muted);
+  border-style: dashed;
+}
+
+.hero-social-btn.is-placeholder:hover {
+  border-color: var(--navy-mid);
+  color: var(--navy-mid);
+}
+
+/* Alert notice */
+.hero-toast-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background-color: var(--navy-subtle);
+  border: 1px solid var(--navy-border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--navy-mid);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.toast-icon {
+  flex-shrink: 0;
+  color: var(--navy-accent);
+}
+
+/* Signals Strip */
+.hero-signals {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.signal-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.signal-icon {
+  color: var(--navy-accent);
+  flex-shrink: 0;
+}
+
+.signal-icon.gold {
+  color: #d97706;
+}
+
+/* ==========================================================================
+   PROFESSIONAL CIRCULAR PROFILE PHOTO CROPPING & RESPONSIVE SIZING
+   ========================================================================== */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.profile-circular-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Circular Cropping Frame */
+.profile-circle-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  box-shadow: 
+    0 0 0 4px var(--navy-mid),
+    0 20px 25px -5px rgba(15, 23, 42, 0.16),
+    0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  background-color: var(--navy-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all var(--transition-normal);
+}
+
+.profile-circle-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 0 4px var(--navy-accent),
+    0 25px 35px -5px rgba(15, 23, 42, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .profile-circle-frame {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-circle-frame {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+/* Actual Photo with Circular Crop */
+.profile-circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Clean Placeholder when image is missing */
+.profile-circle-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0a192f 0%, #0f2744 50%, #1e3a8a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  user-select: none;
+}
+
+.placeholder-monogram {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.placeholder-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #93c5fd;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.placeholder-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+.placeholder-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.placeholder-hint code {
+  color: #93c5fd;
+  background: none;
+  padding: 0;
+  font-size: 0.7rem;
+}
+
+/* Floating Pills on Avatar */
+.photo-floating-pill {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.photo-floating-pill.top-right {
+  top: 14px;
+  right: 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.trophy-color {
+  color: #d97706;
+}
+
+.photo-floating-pill.bottom-left {
+  bottom: 14px;
+  left: 14px;
+  background-color: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-available);
+  box-shadow: 0 0 6px var(--status-available);
+}
+
+/* Identity Card under Circle */
+.profile-details-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.details-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  line-height: 1.2;
+}
+
+.details-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.details-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.details-location {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.details-badge {
+  font-size: 0.725rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #065f46;
+  background-color: var(--status-available-bg);
+  border: 1px solid var(--status-available-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.path-icon {
+  color: var(--navy-mid);
+}
+
+.hero-highlight-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.highlight-spark-icon {
+  color: var(--navy-mid);
+  flex-shrink: 0;
+}
